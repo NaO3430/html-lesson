@@ -1,0 +1,142 @@
+@charset "utf-8";
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    color: aliceblue;
+    background-color: black;
+}
+.header{
+    display: flex;
+    border-bottom: 1px solid white;
+    padding: 20px 100px;
+    min-width: 1500px;
+    color: aliceblue;
+    justify-content: space-between;
+}
+.title {
+    height: 100px;
+    line-height: 100px;
+}
+.navigate ul {
+    line-height: 100px;
+    height: 100px;
+    display: flex;
+}
+.navigate li {
+    margin-left: 30px;
+    font-size: 24px;
+}
+.main-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 764px;
+}
+.boxA {
+    flex: 1 0 50px;
+}
+.boxA p {
+    font-size: 32px;
+    margin-left: 50px;
+    line-height: 50px;
+}
+.boxB {
+    flex: 1 0 50px;
+}
+.boxB p {
+    font-size: 24px;
+    margin-left: 100px;
+    line-height: 50px;
+}
+.boxC {
+    flex: 1 0 300px;
+}
+.boxC p {
+    margin-left: 100px;
+    font-size: 16px;
+    width: 800px;
+    height: 350px;
+    word-wrap: break-word;
+}
+.boxD {
+    flex: 1 0 50px;
+    margin-right: 100px;
+}
+.boxD ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.boxD li {
+    line-height: 50px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.boxE {
+    flex: 1 0 50px;
+}
+.boxE p {
+    font-size: 16px;
+    background-color: red;
+    border-radius: 10px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 300px;
+}
+.boxF {
+    flex: 1 0 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio {
+    font-size: 32px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.imgs {
+    display: flex;
+    justify-content: center;
+    
+}
+.imgs li {
+    list-style: none;
+    margin-right: 17px;
+}
+.imgs2 {
+    display: flex;
+    justify-content: center;
+}
+.imgs2 li {
+    list-style: none;
+    margin-right: 17px;
+}
+.footer {
+    color: aliceblue;
+}
+.copy {
+    text-align: center;
+}
+
+.link {
+    height: 300px;
+}
+.link p {
+    background-color: red;
+    text-align: center;
+    margin: 70px 570px;
+    border-radius: 10px;
+    padding: 20px;
+}
+main {
+    border-bottom: 1px solid white;
+}
+.footer {
+    height: 90px;
+}
+.copy {
+    padding-top: 30px;
+}
