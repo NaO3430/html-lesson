@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--フォントCSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="https://cdn.skypack.dev/sanitize.css">
+    <!--スタイルシート-->
+    <link rel="stylesheet" href="../css/contact_style.css">
     <title>Document</title>
 </head>
 <body>
+    
+    <header class="header">
+        <h1 class="title">
+            <img src="../img/logo.svg" alt="ロゴ">
+            <span>よっしーんフォト</span>
+        </h1>
+        <nav class="navigate">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="main-container">
+            <h2>Contact</h2>
+            <div class="contact">
+                <p>name</p>
+                <input type="text" class="name">
+                <p>email</p>
+                <input type="email" class="mail">
+                <P>message</P>
+                <textarea></textarea>
+                <div>
+                    <a class="submit-btn" href="#">submit</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><small>2019&copy;Copyright - Taiga Yoshida</small></p>
+    </footer>
     
 </body>
 </html>
