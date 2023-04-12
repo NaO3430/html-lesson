@@ -13,7 +13,8 @@ a:hover {
 }
 body {
   font-family: "Noto Sans JP", sans-serif;
-  max-width: 1512px;
+  width: 100%;
+  height: 100%;
   color: aliceblue;
   background-color: black;
 }
@@ -25,15 +26,17 @@ body {
   border-bottom: 1px solid white;
 }
 .header-img img {
-  max-width: 100%;
+  width: 100%;
 }
 .title {
+  display: flex;
   text-align: center;
+  align-items: center;
   margin-left: 39px;
   font-size: 34px;
 }
 .title img {
-  margin-left: 23px;
+  margin-right: 23px;
 }
 nav {
   display: flex;
@@ -45,6 +48,7 @@ nav {
   margin-right: 37px;
 }
 .nav-links li {
+  list-style: none;
   margin-left: 30px;
   font-size: 24px;
 }
@@ -166,9 +170,6 @@ main {
 /* レスポンシブ */
 
 @media screen and (max-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
   .header-container {
     height: 48px;
   }
@@ -177,19 +178,20 @@ main {
     font-size: 16px;
   }
   .title img {
-    margin: 0 auto;
+    margin-right: 7px;
     width: 18px;
   }
   .nav-links {
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 93px;
-    height: 852px;
-    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
     flex-direction: column;
     text-align: center;
-    transform: translateX(100%);
+    background-color: black;
+    z-index: 100;
+    visibility: hidden;
   }
   .nav-links li {
     margin: 0 auto;
