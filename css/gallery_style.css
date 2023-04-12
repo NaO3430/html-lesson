@@ -7,7 +7,8 @@ body {
   background-color: black;
   color: aliceblue;
   font-family: "Noto Sans JP", sans-serif;
-  max-width: 1512px;
+  width: 100vw;
+  height: 100vh;
 }
 a {
   text-decoration: none;
@@ -24,53 +25,116 @@ a:hover {
   border-bottom: 1px solid white;
 }
 .title {
+  display: flex;
   text-align: center;
-  height: 93px;
+  align-items: center;
   margin-left: 39px;
-  line-height: 93px;
   font-size: 34px;
 }
 .title img {
-  vertical-align: middle;
-  margin-left: 23px;
+  margin-right: 23px;
 }
-.navigate ul {
+nav {
+  display: flex;
+}
+.nav-links {
+  line-height: 93px;
+  height: 93px;
   display: flex;
   margin-right: 37px;
-  height: 93px;
-  line-height: 93px;
 }
-.navigate li {
-  font-size: 24px;
-  margin-left: 30px;
+.nav-links li {
   list-style: none;
+  margin-left: 30px;
+  font-size: 24px;
+}
+.bugger {
+  align-self: center;
+  display: none;
+}
+.bugger div {
+  width: 25px;
+  height: 1px;
+  background-color: white;
+  margin: 6px;
 }
 .container {
-  height: 2520px;
+  margin: 48px auto 72px auto;
 }
 .main-title {
-  height: 189px;
-  line-height: 189px;
   letter-spacing: 0.2em;
   font-size: 64px;
   text-align: center;
 }
 .img-list {
-  margin-left: 129px;
+  margin: 45px 84px 0px 129px;
   display: grid;
-  grid-template-columns: repeat(3, 435px);
-  grid-template-rows: repeat(9, 251px);
+  grid-template-columns: repeat(3, 1fr);
 }
 .img-list li {
   list-style: none;
+  width: 100%;
+}
+.img-list img {
+  width: 100%;
 }
 .grid-item--large {
   grid-row: span 2;
 }
 .footer {
-  height: 91px;
   border-top: 1px solid white;
-  text-align: center;
-  line-height: 91px;
+  height: 93px;
   font-size: 16px;
+  line-height: 92px;
+  text-align: center;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 48px;
+  }
+  .title {
+    margin-left: 19px;
+    font-size: 16px;
+  }
+  .title img {
+    margin-right: 7px;
+    width: 18px;
+  }
+  .nav-links {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    z-index: 100;
+    visibility: hidden;
+  }
+  .nav-links li {
+    margin: 0 auto;
+  }
+  .bugger {
+    display: block;
+    margin-right: 16px;
+  }
+  .container {
+    margin: 40px auto;
+  }
+  .main-title {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .img-list {
+    margin: 24px 16px 0px 16px;
+    grid-template-columns: 1fr;
+  }
+  .footer {
+    height: 46px;
+    line-height: 46px;
+  }
 }
