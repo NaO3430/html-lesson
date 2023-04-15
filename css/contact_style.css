@@ -4,14 +4,16 @@
   padding: 0;
 }
 body {
-  background-color: black;
-  color: aliceblue;
   font-family: "Noto Sans JP", sans-serif;
-  max-width: 1512px;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  background-color: black;
 }
 a {
   text-decoration: none;
   color: inherit;
+  list-style: none;
 }
 a:hover {
   text-decoration: underline;
@@ -24,44 +26,49 @@ a:hover {
   border-bottom: 1px solid white;
 }
 .title {
+  display: flex;
   text-align: center;
-  height: 93px;
+  align-items: center;
   margin-left: 39px;
-  line-height: 93px;
   font-size: 34px;
 }
 .title img {
-  vertical-align: middle;
   margin-left: 23px;
 }
-.navigate ul {
+.nav-links {
+  line-height: 93px;
+  height: 93px;
   display: flex;
   margin-right: 37px;
-  height: 93px;
-  line-height: 93px;
 }
-.navigate li {
-  font-size: 24px;
-  margin-left: 30px;
+.nav-links li {
   list-style: none;
+  margin-left: 30px;
+  font-size: 24px;
 }
-.container {
-  height: 796px;
+.bugger {
+  align-self: center;
+  display: none;
 }
-.main-container {
+.bugger div {
+  width: 25px;
+  height: 1px;
+  background-color: white;
+  margin: 6px;
+}
+main {
   margin: 48px auto;
 }
-.main-container h2 {
+.container {
+  width: 610px;
+  margin: 0 auto;
+}
+.main-title {
   letter-spacing: 0.2em;
   font-size: 64px;
   text-align: center;
 }
-.contact {
-  width: 610px;
-  height: 559px;
-  margin: 48px auto 48px auto;
-}
-.contact p {
+.container p {
   font-size: 24px;
   margin-top: 32px;
   margin-bottom: 8px;
@@ -81,10 +88,12 @@ textarea {
 .btn {
   font-size: 16px;
   background-color: #aa0000;
-  padding: 13px 52px;
+  width: 158px;
+  height: 49px;
   border-radius: 15px;
   display: inline-block;
   margin-top: 32px;
+  text-align: center;
 }
 .footer {
   height: 91px;
@@ -92,4 +101,63 @@ textarea {
   text-align: center;
   line-height: 91px;
   font-size: 16px;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 48px;
+  }
+  .title {
+    margin-left: 19px;
+    font-size: 16px;
+  }
+  .title img {
+    margin-right: 7px;
+    width: 18px;
+  }
+  .nav-links {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    z-index: 100;
+    visibility: hidden;
+  }
+  .nav-links li {
+    margin: 0 auto;
+  }
+  .bugger {
+    display: block;
+    margin-right: 16px;
+  }
+  main {
+    margin: 24px auto 128px auto;
+  }
+  .container {
+    width: 350px;
+  }
+  .container p {
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+  .main-title {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+  .contact p {
+    font-size: 20px;
+  }
+  .btn {
+    margin-left: 95px;
+  }
+  .footer {
+    height: 46px;
+    line-height: 46px;
+  }
 }
