@@ -2,7 +2,7 @@ const borderLine = '='.repeat(24);
 const taskListTitle = '現在持っているタスク一覧';
 const taskList = ['掃除', '買い物', '散歩'];
 
-showTaskList = () => {
+const showTaskList = () => {
   console.log(borderLine);
   console.log(taskListTitle);
   console.log(borderLine);
