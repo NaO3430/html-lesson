@@ -1,19 +1,26 @@
-executionFizzBuzz = () => {
+const executionFizzBuzz = () => {
   const fizzNum = document.getElementById('input-fizz').value;
   const buzzNum = document.getElementById('input-buzz').value;
+
+  const ul = document.getElementById('list');
+  ul.innerHTML = '';
+  const createListItem = (text) => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    ul.appendChild(li);
+  };
   if (isNaN(fizzNum) || isNaN(buzzNum)) {
-    document.getElementById('output').innerHTML = '整数値を入力して下さい';
+    ul.innerHTML = '整数値を入力して下さい';
     return;
   }
-  let output = '';
+
   for (let i = 1; i <= 99; i++) {
     if (i % fizzNum === 0 && i % buzzNum === 0) {
-      output += `FizzBuzz ${i}<br>`;
+      createListItem(`FizzBuzz ${i}`);
     } else if (i % fizzNum === 0) {
-      output += `Fizz ${i}<br>`;
+      createListItem(`Fizz ${i}`);
     } else if (i % buzzNum === 0) {
-      output += `Buzz ${i}<br>`;
+      createListItem(`Buzz ${i}`);
     }
   }
-  document.getElementById('output').innerHTML = output;
 };
