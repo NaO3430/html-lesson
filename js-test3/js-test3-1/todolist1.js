@@ -13,8 +13,8 @@ const createDeleteBtn = () => {
 };
 
 const createTodoList = (name) => {
-  const todoListTable = document.getElementById('todo-list');
-  const newRow = todoListTable.insertRow();
+  const taskTable = document.getElementById('todo-list');
+  const newRow = taskTable.insertRow();
 
   const idCell = newRow.insertCell();
   const taskNameCell = newRow.insertCell();
